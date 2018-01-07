@@ -1,0 +1,9 @@
+model_dir: model
+
+data:
+  train_features_file: data/src-train.txt
+  train_labels_file: data/tgt-train.txt
+  eval_features_file: data/src-dev.txt
+  eval_labels_file: data/tgt-dev.txt
+  source_words_vocabulary: data/shared.vocab
+  target_words_vocabulary: data/shared.vocab
