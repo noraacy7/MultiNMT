@@ -14,9 +14,7 @@ def main():
     parser.add_argument("--data", nargs="+",
                 required=True,
                 help="List of corpus to shuffle.")
-    parser.add_argument("--suffix", default="shuf",
-                help="Suffix of shuffle corpus filename.")
-    args = parser.parse_args()
+        args = parser.parse_args()
     # read files in the arg list
     name = args.data
     suffix = "." + args.suffix
@@ -27,7 +25,7 @@ def main():
     order = np.arange(size)
     np.random.shuffle(order)
     # generate shuffle file
-    new_f = [codecs.open(item+suffix, "w", "utf-8") for item in name]
+    new_f = [codecs.open(item+".shuf", "w", "utf-8") for item in name]
     for idx in order.tolist():
         lines = [item[idx] for item in data]
         for line, fd in zip(lines, new_f):
