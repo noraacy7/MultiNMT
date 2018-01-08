@@ -34,6 +34,5 @@ def main():
         fdr.close()
         fdw.close()
 
-
 if __name__=="__main__":
     main()
