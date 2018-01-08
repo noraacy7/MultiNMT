@@ -24,7 +24,23 @@ have to merge source data and target data to a single file,
 and use <code>python -B bin/build_vocab.py</code> to build
 a shared vocabulary.
 
-4.Train and infer
+4.Shuffle corpus (Optional)
+
+You can use following script to shuffle corpus, you will find "corpus.shuf" under data directory.
+```
+python -B bin/shuffle.py --data [data1, data2, ...]
+```
+
+5.Oversample corpus (Optional)
+
+If one of parallel corpus is not enough, you can use this script to Oversample corpus and "corpus.sample" will be under data
+directory.
+
+```
+python -B bin/sample.py --data [data1, data2,...] --repeat [number of repeat]
+```
+
+6.Train and infer
 
 This toolkit is based on OpenNMT-tf, please read [document](https://github.com/OpenNMT/OpenNMT-tf/) to find
 how to train a model with OpenNMT-tf.
