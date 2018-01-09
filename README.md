@@ -1,12 +1,12 @@
 # MultiNMT
-Multilingual language neural machine translation system with simple Seq2Seq model based on [OpenNMT-tf](https://github.com/OpenNMT/OpenNMT-tf).
+Multilingual language neural machine translation system with simple Seq2Seq model based on  
+ [tensorflow nmt](https://github.com/tensorflow/nmt).
 
 ### Usage
 1.Tokenize
 
 If you download a corpus which hasn't been tokenized, such as WMT dataset, you maybe wanted to tokenize the corpus first.
-You can use [Tokenizer](https://github.com/OpenNMT/Tokenizer)
-from OpenNMT community. Also, you can use <code> python -B bin/tokenize.py </code> to tokenize your corpus.
+You can use <code> python -B bin/tokenize.py </code> to tokenize your corpus.
 
 2.Byte Pair Encoding
 
@@ -42,8 +42,13 @@ python -B bin/sample.py --data [data1, data2,...] --repeat [number of repeat]
 
 6.Train and infer
 
-This toolkit is based on OpenNMT-tf, please read [document](https://github.com/OpenNMT/OpenNMT-tf/) to find
-how to train a model with OpenNMT-tf.
+You can use following script to train and inference.
+
+```
+python -B -m bin.main [arguments]
+```
+
+For detail arguments, please see [tensorflow nmt document](https://github.com/tensorflow/nmt/blob/master/README.md)
 
 ### QuickStart
 
@@ -97,8 +102,7 @@ python -B -m bin.build_vocab --data data/train.txt --save_vocab data/shared.voca
 
 4.Train and inference
 
-Please see OpenNMT-tf [document](https://github.com/OpenNMT/OpenNMT-tf), we provide sample configure under <code>config</code>
-directory and we use <code>main.py</code> from OpenNMT-tf to train and inference.
+See Usage segment above and [tensorflow nmt document](https://github.com/tensorflow/nmt/blob/master/README.md)
 
 ### References
 Johnson M, Schuster M, Le Q V, et al. Google's Multilingual Neural Machine Translation System: Enabling Zero-Shot Translation[J]. 2016.
